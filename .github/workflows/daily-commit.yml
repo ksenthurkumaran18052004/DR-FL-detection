@@ -1,0 +1,27 @@
+name: Daily Commit Pipeline
+
+on:
+  schedule:
+    # Every day at 7:00 AM IST (which is 1:30 AM UTC)
+    - cron: '30 1 * * *'
+
+jobs:
+  daily-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set Git Config
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Make Daily Commit (if needed)
+        run: |
+          echo "Updating timestamp" > last_updated.txt
+          date >> last_updated.txt
+          git add .
+          git commit -m "🕐 Automated Daily Commit - $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "Nothing to commit"
+          git push
