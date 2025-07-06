@@ -1,0 +1,7 @@
+streamlit
+tensorflow
+numpy
+Pillow
+python-jose
+streamlit-auth0
+PyYAML
