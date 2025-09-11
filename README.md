@@ -26,21 +26,6 @@ Built with **TensorFlow | Streamlit | Auth0 Authentication | Docker Ready | Clou
 
 ---
 
-## 📂 Repository Structure
-.
-├── student_model_2.ipynb # Student model training notebook
-├── teacher model.ipynb # Teacher model training notebook
-├── student_model_mobilenetv2.h5 # Saved student model weights
-├── teacher_model_mobilenetv2.h5 # Saved teacher model weights
-├── app.py # Streamlit Web Application
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
-
-yaml
-Copy code
-
----
-
 ## 🛠️ Tech Stack
 - **Python 3.10**
 - **TensorFlow / Keras**
